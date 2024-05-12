@@ -1,7 +1,7 @@
 # WeatherApp
 
 ### The logo of our program
-![WeatherApp](weatherApp-icon.png)
+![WeatherApp](images/weatherApp-icon.png)
 
 This web application allows users to get weather information for any location worldwide.
 
@@ -11,10 +11,10 @@ This application is built using HTML, CSS, and JavaScript. It utilizes the API f
 
 
 ### Start window
-![Overview1](Overview1.png)
+![Overview1](images/Overview1.png)
 
 ### Second window
-![Overview2](Overview2.png)
+![Overview2](images/Overview2.png)
 
 ## Features
 
