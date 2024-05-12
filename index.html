@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.core.css' integrity='sha512-eZih0rne5vAjEWet1syNsU3LTj1TygGLuLq304xv+JZeaIqi1E1OCbYFD0YPMqhgqFYoOH28QJzJIj+wkVWm+A==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.bootstrap.css' integrity='sha512-eauod+oRhJ84heQKG7Koq4RFiVEXhqhi14M+3+m/6XPJ/FmRHz4yDJ9mtz1X8HdOmQjdX69Wg8/rKal7lgEfsw==' crossorigin='anonymous'/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.js' integrity='sha512-7Qu5pr+fIUNnTgU03DC5Y1b3brNO64CQUCT1X+hEcbMM8NGasu+WWBVtF7byk01X+gFdZqSPDpOV3y5lFair0A==' crossorigin='anonymous' defer></script>
+    <script src="script.js" defer></script>
 </head>
-<body>
-    
+<body>    
     <div class="container">
         <h1>Weather App</h1>
         <input type="text" id="locationInput" placeholder="Please enter a location">
@@ -19,12 +22,10 @@
         
             <div class="weather-box">
                 <div class="box">
-                    <div class="info-weather">
                         <div class="weather">
                             <img src="images/cloud.png">
                             <p class="temperature">17 <span>°C</span><i class='bx bx-thermometer'></i></p>
                             <p class="description">Broken Clouds</p>
-                        </div>
                     </div>
                 </div>
                 <div class="weather-details">
@@ -53,13 +54,7 @@
                 </div>
             </div>
         
-            <div class="not-found">
-                <div class="box">
-                    <img src="images/404.png">
-                    <p>Sorry! Not Found</p>
-                </div>
-            </div>
     </div>
-    <script src="script.js"></script>
+    
 </body>
 </html>

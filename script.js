@@ -1,8 +1,9 @@
 const container = document.querySelector(".container");
 const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
+const weatherDetailsBox = document.querySelector(".info-weather");
 const weatherDetails = document.querySelector(".weather-details");
-const error404 = document.querySelector(".not-found");
+
 
 async function getWeather(apiKey, location) {
     const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=no`;
@@ -12,11 +13,10 @@ async function getWeather(apiKey, location) {
         const data = await response.json();
         return data;
     } catch(error) {
-        // Обробляємо помилку, якщо місто не знайдено
-        container.classList.remove('active');
-        error404.classList.add('active');
+        return { error: { message: "Місто не знайдено" } };
     }
 }
+
 
 function getWeatherIcon(condition) {
     switch(condition.toLowerCase()) {
@@ -53,6 +53,7 @@ function displayWeather(weatherData) {
 
     if ('error' in weatherData) {
         weatherInfoDiv.innerText = `Помилка: ${weatherData['error']['message']}`;
+        alertify.error(weatherData['error']['message']);
     } else {
         const locationName = weatherData.location.name;
         const country = weatherData.location.country;
@@ -61,17 +62,23 @@ function displayWeather(weatherData) {
         const windSpeedKph = weatherData.current.wind_kph;
         const humidity = weatherData.current.humidity;
         const weatherIcon = getWeatherIcon(condition);
-        const windIcon = 'images/wind-regular-24.png'; // підставте свій шлях до іконки для вітру
-        const humidityIcon = 'images/water-regular-24.png'; // підставте свій шлях до іконки для вологості
 
 
         const weatherInfoText = `
+            <div class="info-weather">          
             <p>Weather in  ${locationName}, ${country}:</p>
-            <p>temperature: ${tempCelsius} °С</p>
+            <p class="sigma"></p>
+            <p>Temperature: ${tempCelsius} °С</p>
+            <p class="sigma"></p>
             <p>Condition: ${condition}</p>
+            </div>
             <img src="${weatherIcon}" alt="${condition}">
-            <p>Wind speed: ${windSpeedKph} km/h <img src="${windIcon}" alt="wind" id="wind"></p>
-            <p>Humidity: ${humidity}% <img src="${humidityIcon}" alt="humidity" id="humidity"></p>
+            <div class="info-weather">
+            <p>Wind speed: ${windSpeedKph} Km/h</p>
+            <p class="sigma"></p>
+            <p>Humidity: ${humidity}%</p>
+            </div>
+
         `;
 
         weatherInfoDiv.innerHTML = weatherInfoText;
@@ -85,23 +92,22 @@ async function getWeatherInfo() {
     const location = locationInput.value.trim();
 
     if (location === '') {
-        alert('Будь ласка, введіть місце');
+        alertify.error("Введіть назву міста");
         return;
     }
 
     const weatherData = await getWeather(apiKey, location);
     
-    if ('error' in weatherData) {
+    if ('400' in weatherData) {
         // Якщо виникла помилка під час отримання погоди, приховуємо блок з погодою
         weatherBox.style.display = 'none';
         // Показуємо блок з повідомленням про помилку
         error404.classList.add('active');
         return;
     } else {
-        // Приховуємо блок з повідомленням про помилку
-        error404.classList.remove('active');
         // Показуємо блок з погодою
         weatherBox.style.display = 'block';
+
         displayWeather(weatherData);
     }
 }
