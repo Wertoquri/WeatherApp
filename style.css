@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("images/background-a.jpg");
+  background-position: center;
+}
+  
+.container {
+    max-width: 400px;
+    backdrop-filter: blur(20px);
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+input[type="text"] {
+
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .1);
+}
+
+button:hover {
+    background-color: #0056b3;
+    background: rgba(255, 255, 255, .5);
+}
+
+#weatherInfo {
+    margin-top: 20px;
+}
+
+/* Стилі для зображень */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стилі для блоків з деталями погоди */
+.weather-details {
+    display: none;
+    text-align: center;
+}
+
+/* Стилі для блоку з погодною інформацією */
+.weather-box {
+    position: relative;
+}
+
+/* Стилі для блоків вологості та вітру */
+#humidity, #wind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 7%;
+    text-align: center;
+    
+}
+
+/* Стилі для тексту в блоках вологості та вітру */
+#humidity p, #wind p  {
+    margin-left: 10px;
+}
+
+/* Приховування картинок */
+.weather-box img, .not-found img {
+    display: none;
+}
+
+/* Приховування тексту */
+.weather-box .description, .not-found p, .temperature span{
+    display: none;
+}
+
+.temperature {
+  display: none;
+}
+
