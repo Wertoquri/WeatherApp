@@ -84,7 +84,7 @@ function displayWeather(weatherData) {
                 tempUnitSymbol = '°F';
                 break;
             case 'kelvin':
-                tempValue = currentWeather.temp_c + 273.15;
+                tempValue = Math.floor(currentWeather.temp_c + 273.15);
                 tempUnitSymbol = 'K';
                 break;
         }
@@ -95,11 +95,11 @@ function displayWeather(weatherData) {
                 windSpeedUnitSymbol = 'km/h';
                 break;
             case 'ms':
-                windSpeedValue = currentWeather.wind_mph * 0.44704;
+                windSpeedValue = Math.floor(currentWeather.wind_mph * 0.44704);
                 windSpeedUnitSymbol = 'm/s';
                 break;
             case 'knots':
-                windSpeedValue = currentWeather.wind_mph * 0.868976;
+                windSpeedValue = Math.floor(currentWeather.wind_mph * 0.868976);
                 windSpeedUnitSymbol = 'knots';
                 break;
         }
