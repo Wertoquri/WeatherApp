@@ -42,3 +42,8 @@ If you would like to contribute, please create a Pull Request with your suggesti
 
 - wertoquri
 - Gsjwhrbf
+
+
+## License
+
+This project is licensed under the [MIT License](https://github.com/Wertoquri/WeatherApp/blob/main/LICENSE).
