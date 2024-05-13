@@ -37,6 +37,7 @@ This application is built using HTML, CSS, and JavaScript. It utilizes the API f
 ## Contribution
 
 If you would like to contribute, please create a Pull Request with your suggestions.
+#### See the contribution file at the link [Contribution](CONTRIBUTING.md)
 
 ## Authors
 
