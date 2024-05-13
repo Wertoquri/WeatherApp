@@ -2,20 +2,23 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Use this section to inform users about which versions of your project are currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
+| 1.0.x   | :white_check_mark: |
+| 2.0.x   | :white_check_mark: |
+| 3.0.x   | :white_check_mark: |
 | 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
 
 ## Reporting a Vulnerability
 
 Use this section to tell people how to report a vulnerability.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+If you discover a security vulnerability, report it by [writing a post to](https://github.com/Wertoquri/WeatherApp/discussions/2). We take security seriously and will investigate immediately.
+
+When reporting a vulnerability, please include detailed information about the issue, including steps to reproduce it and any potential impact.
+
+We will acknowledge receipt of your report within 24 hours and provide regular updates on the progress of the fix.
+
+Thank you for helping to keep our project secure!
