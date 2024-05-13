@@ -30,6 +30,8 @@ This application is built using HTML, CSS, and JavaScript. It utilizes the API f
 
 ## Usage
 
+### run the site on a local server!
+
 1. Enter the city name in the input field.
 2. Click the "Search" button.
 3. The weather information will be displayed on the screen.
