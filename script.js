@@ -13,7 +13,7 @@ async function getWeather(apiKey, location) {
         const data = await response.json();
         return data;
     } catch (error) {
-        return { error: { message: "Місто не знайдено" } };
+        return { error: { message: "city not found" } };
     }
 }
 
