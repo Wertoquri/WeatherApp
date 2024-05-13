@@ -17,6 +17,21 @@
         <input type="text" id="locationInput" placeholder="Please enter a location">
         <button onclick="getWeatherInfo()">Get Weather</button>
         <div id="weatherInfo"></div>
+        <div class="unit-selection">
+            <label for="tempUnit">Temperature:</label>
+            <select id="tempUnit">
+                <option value="celsius" class="option">°C</option>
+                <option value="fahrenheit" class="option">°F</option>
+                <option value="kelvin" class="option">K</option>
+            </select>
+            <label for="windUnit">Wind:</label>
+            <select id="windUnit">
+                <option value="kph" class="option">km/h</option>
+                <option value="ms" class="option">m/s</option>
+                <option value="knots" class="option">knots</option>
+            </select>
+            <button id="geolocateBtn">Use My Location</button>
+        </div>
             <div class="search-box">
             </div>
         

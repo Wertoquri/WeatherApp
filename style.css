@@ -117,7 +117,7 @@ input[type="text"]::placeholder {
 }
 
 .info-weather:hover {
-    border: #0056b3;
+    border: #73ace9;
     border-radius: 5px;
     padding: auto;
     font-size: large;
@@ -128,4 +128,49 @@ input[type="text"]::placeholder {
 .info-weather:not(:hover) {
     transition: all 0.5s ease-in-out;
     opacity: 1;
+}
+
+.unit-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.unit-selection label {
+    margin-right: 5px;
+    
+}
+
+.unit-selection select {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.forecast {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.forecast-day {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+}
+
+
+.option {
+    color: black;
 }
