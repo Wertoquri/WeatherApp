@@ -95,7 +95,7 @@ function displayWeather(weatherData) {
                 windSpeedUnitSymbol = 'km/h';
                 break;
             case 'ms':
-                windSpeedValue = Math.floor(currentWeather.wind_mph * 0.44704);
+                windSpeedValue = Math.floor(currentWeather.wind_kph * 0.44704);
                 windSpeedUnitSymbol = 'm/s';
                 break;
             case 'knots':
