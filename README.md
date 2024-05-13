@@ -47,3 +47,7 @@ If you would like to contribute, please create a Pull Request with your suggesti
 ## License
 
 This project is licensed under the [MIT License](https://github.com/Wertoquri/WeatherApp/blob/main/LICENSE).
+
+
+## Bug Report
+If you encounter any issues or bugs while using the Weather App, please submit a bug report [here](/.github/ISSUE_TEMPLATE/bug_report.md). Your feedback helps us improve the application.
