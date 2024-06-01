@@ -53,7 +53,6 @@ If you would like to contribute, please create a Pull Request with your suggesti
 ## Authors
 
 - wertoquri
-- Gsjwhrbf
 
 ## License
 
